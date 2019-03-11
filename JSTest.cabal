@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1940fb21bb7a5595276dbdb50db04dca75e575a607a204af4a3d30573857a549
+
+name:           JSTest
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/JSTest#readme>
+homepage:       https://github.com/githubuser/JSTest#readme
+bug-reports:    https://github.com/githubuser/JSTest/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/JSTest
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_JSTest
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable JSTest-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_JSTest
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JSTest
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite JSTest-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_JSTest
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JSTest
+    , base >=4.7 && <5
+  default-language: Haskell2010
